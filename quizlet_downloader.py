@@ -57,7 +57,14 @@ if __name__ == "__main__":
     leftTerms = getTermsFromLeftSide(soup)
     rightTerms = getTermsFromRightSide(soup)
     
-    string2Copy = convertToString(leftTerms, rightTerms, between=" ", firstTermsSide="right", end="\n")
+    # string2Copy = convertToString(leftTerms, rightTerms, between=" ", firstTermsSide="right", end="\n")
+
+    filteredTerms = []
+
+    for term in leftTerms:
+        filteredTerms.append(term.split(",")[0])
+    string2Copy = "\n".join(filteredTerms)
+    
 
     # string2Copy = "\n".join(leftTerms)
     # string2Copy = "\n".join(rightTerms)

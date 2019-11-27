@@ -1,59 +1,55 @@
-das Argument
-das Bild, er
-der Grafik, en
-das Diagramm, e
-der Text, e
-die Textwiedergabe
-die Aussage, n
-der Titel
-der Inhalt
-der Vergleich, e
-der Schluss
-das Beispiel, e
-der Artikel
-das Problem, e
-die Problematik
-die Information, en
-der Zweck
-das Ziel, e
-das Thema, s
-die Thematik
-die Entwicklung
-der Vorteil, e
-der Nachteil, e
-die Behauptung, s
-das Niveau
-der Wert, e
-die Minderheit, en
-die Mehrheit
-die Hälfte, n
-die Zussamenfassung
-das Ergebnis, se
-die Vermutung
-die Perspektive, n
-der Stand
-die Beziehung
-die Tatsache, n
-die Zunahme
-das Wachstung
-der Zuwachst
-die Tendenz
-der Trend
-die Ablehnung
-der Verfasser
-der Rückgang
-der Grund, ⸚e
-die Folge
-der Efekt, e
-die Wirkung
-der Einfluss
-die Begrundung
-die Aussage, n
-die Quelle, n
-das Schaubild, er
-die Erörterung
-die Stellungsnahme
-die Analyse
-der Beleg, e
-der Beitrag, ⸚e
-der Rezultat, e
+das Argument.
+das Bild.
+die Grafik.
+das Diagramm.
+der Text.
+die Aussage.
+der Titel.
+der Inhalt.
+der Vergleich.
+der Schluss.
+das Beispiel.
+der Artikel.
+das Problem.
+die Problematik.
+die Information.
+der Zweck.
+das Ziel.
+das Thema.
+die Thematik.
+die Entwicklung.
+der Vorteil.
+der Nachteil.
+die Behauptung.
+das Niveau.
+der Wert.
+die Minderheit.
+die Mehrheit.
+die Hälfte.
+das Ergebnis.
+die Vermutung.
+die Perspektive.
+der Stand.
+die Beziehung.
+die Tatsache.
+die Zunahme.
+der Zuwachs.
+die Tendenz.
+der Trend.
+die Ablehnung.
+der Verfasser.
+der Rückgang.
+der Grund.
+die Folge.
+die Wirkung.
+der Einfluss.
+die Begründung.
+die Aussage.
+die Quelle.
+das Schaubild.
+die Erörterung.
+die Stellungsnahme.
+die Analyse.
+der Beleg.
+der Beitrag.
+das Ergebnis.

@@ -1,6 +1,5 @@
 from gtts import gTTS
 import sys
-from pydub import AudioSegment
 
 def getTtsFromString(string, lang):
     '''
@@ -13,11 +12,9 @@ def main():
     with open("text2mp3Input.txt", "r") as f:
         s = f.read()
     
-    tts = getTtsFromString(s)
-    fileName += ".mp3"
+    tts = getTtsFromString(s, lang)
+    fileName = "text2mp3Output.mp3"
     tts.save(fileName)
-
-
 
 if __name__ == "__main__":
     main()
