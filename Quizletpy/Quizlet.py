@@ -53,7 +53,8 @@ class Quizlet:
 
             filePath = os.path.join(tmpPath, f"r_{i}") + ".mp3"
             right = AudioSegment.from_file(filePath, format="mp3")
-            finalMp3 += right + AudioSegment.silent(pauseBW)
+            finalMp3 += right + AudioSegment.silent(pauseAW)
+
             if self._debug:
                 numOfBlocks = int(100*(i+1)/len(self._leftTerms))
                 numOfSpaces = 100 - numOfBlocks
@@ -149,9 +150,9 @@ class Quizlet:
         rightSide = []
         for termClass in termsClasses:
             a = termClass.find("a", {"class": "SetPageTerm-definitionText"})
-            if a != None:
+            if a is not None:
                 span = a.find("span")
-                if span != None:
+                if span is not None:
                     term = Term(span.text, self._langRight, False)
                     rightSide.append(term)
         return rightSide
