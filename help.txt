@@ -1,0 +1,10 @@
+Arguments:
+-url URL - URL is the url of quizlet
+-langs lang1 lang2 - lang1 is the language on the left column, lang2 is the language on the right column
+
+Optional arguments:
+*-text filename - create filename txt file
+*-mp3 filename - create filename mp3 file
+*-first left/right - decides which column of quizlet is put first
+*-pauseBW time - pause between words
+*-pauseAW time - pause after words

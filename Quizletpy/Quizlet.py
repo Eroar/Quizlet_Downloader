@@ -44,7 +44,8 @@ class Quizlet:
         '''
         self._createMp3WordsFiles(first=first)
         tmpPath = os.path.join(os.getcwd(), "tmp")
-        print(f"Creating the final file \"{fileName}\".mp3")
+        if self._debug:
+            print(f"Creating the final file \"{fileName}\".mp3")
         finalMp3 = AudioSegment.empty()
         for i in range(len(self._leftTerms)):
             filePath = os.path.join(tmpPath, f"l_{i}") + ".mp3"
@@ -61,7 +62,8 @@ class Quizlet:
                 blocks = u"\u2588" *  numOfBlocks
                 spaces = " " * numOfSpaces
                 print("[" + blocks +  spaces + "]", end="\r", flush=True)
-        print("[" + blocks +  spaces + "]")
+        if self._debug:
+            print("[" + blocks +  spaces + "]")
 
         finalMp3.export(f"{fileName}.mp3", format="mp3")
         path = os.path.join(os.getcwd(), "tmp")
@@ -157,18 +159,27 @@ class Quizlet:
                     rightSide.append(term)
         return rightSide
 
-    def convertToString(self, leftTerms, rightTerms, between=" - ", firstTermsSide="left", end="\n"):
+    def words2TextFile(self, fileName="txtOutput", between=" - ", firstTermsSide="left", end="\n"):
+        outString = self._convertToString(between=between, firstTermsSide=firstTermsSide, end=end)
+        with open(fileName + ".txt", "wb") as f:
+            f.write(outString.encode("utf-8"))
+
+    def getString(self, fileName="txtOutput", between=" - ", firstTermsSide="left", end="\n"):
+        return self._convertToString(between=between, firstTermsSide=firstTermsSide, end=end)
+
+    def _convertToString(self, between=" - ", firstTermsSide="left", end="\n"):
         outString = ""
-        if len(leftTerms) != len(rightTerms):
+
+        if len(self._leftTerms) != len(self._rightTerms):
             raise Exception("left and right terms are not equal sizes")
 
         if firstTermsSide == "left":
-            for i in range(len(leftTerms)):
-                outString += leftTerms[i] + between + rightTerms[i]  + end
+            for i in range(len(self._leftTerms)):
+                outString += str(self._leftTerms[i]) + between + str(self._rightTerms[i])  + end
         
         elif firstTermsSide == "right":
-            for i in range(len(leftTerms)):
-                outString += rightTerms[i] + between + leftTerms[i] + end
+            for i in range(len(self._leftTerms)):
+                outString += str(self._rightTerms[i]) + between + str(self._leftTerms[i]) + end
         else:
             raise Exception("\"firstTermsSide\" argument should be \"left\" or \"right\"")
 
